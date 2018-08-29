@@ -26,7 +26,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.json(database.users);
+  res.json('it is working!');
 });
 
 // Inject additional dependencies with route controllers that take deps

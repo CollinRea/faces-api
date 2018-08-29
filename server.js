@@ -8,14 +8,14 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+const DATABASE_URL = process.env.DATABASE_URL
+
 // Initial DB connection with knex
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'collinrea',
-    password : '',
-    database : 'smart-brain'
+    host : DATABASE_URL,
+    ssl: true
   }
 });
 
